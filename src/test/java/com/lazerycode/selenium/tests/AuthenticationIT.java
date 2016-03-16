@@ -5,7 +5,7 @@ import com.lazerycode.selenium.DriverBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
@@ -29,20 +29,17 @@ public class AuthenticationIT extends DriverBase {
 
     @Test
     public void login() throws Exception {
-
         WebDriver driver = getDriver();
 
-        driver.get("http://test.tender.pro");
-
-        // Find the text input element by its name
+        driver.get(System.getProperty("host"));
 
         driver.findElement(By.name(
                 "usetenderlogin"
-            )).sendKeys("login259");
+            )).sendKeys(System.getProperty("login"));
 
         driver.findElement(By.name(
                 "usetenderpassword"
-            )).sendKeys("BU8YGU6");
+            )).sendKeys(System.getProperty("password"));
 
         driver.findElement(By.name(
                 "submit")).click();
@@ -51,7 +48,7 @@ public class AuthenticationIT extends DriverBase {
                 ".//*[@class='logout']"
         ));
 
-        assertEquals(logoutElements.size(), 1);
+        assertEquals(logoutElements.size(), 1, "There is no logout button, seems we are failed to login!");
         System.out.println(logoutElements);
     }
 }
