@@ -54,15 +54,7 @@
                 </bitrate>
             </version>
         </driver>
-        <driver id="marionette">
-            <version id="0.6.2">
-                <bitrate thirtytwobit="true" sixtyfourbit="true">
-                    <filelocation>https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-win.zip</filelocation>
-                    <hash>20a0eca607edd98392e0590a5a307ef56526647e</hash>
-                    <hashtype>sha1</hashtype>
-                </bitrate>
-            </version>
-        </driver>
+
     </windows>
     <linux>
         <driver id="googlechrome">
@@ -107,15 +99,7 @@
                 </bitrate>
             </version>
         </driver>
-        <driver id="marionette">
-            <version id="0.6.2">
-                <bitrate sixtyfourbit="true">
-                    <filelocation>https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-linux64.gz</filelocation>
-                    <hash>0adc84131607057ca37d42426798bff99faafb56</hash>
-                    <hashtype>sha1</hashtype>
-                </bitrate>
-            </version>
-        </driver>
+
     </linux>
     <osx>
         <driver id="googlechrome">
@@ -152,14 +136,6 @@
                 </bitrate>
             </version>
         </driver>
-        <driver id="marionette">
-            <version id="0.6.2">
-                <bitrate thirtytwobit="true" sixtyfourbit="true">
-                    <filelocation>https://github.com/jgraham/wires/releases/download/v0.6.2/wires-0.6.2-OSX.gz</filelocation>
-                    <hash>2efc475bcc736d0502fb09051932e63052e98c4e</hash>
-                    <hashtype>sha1</hashtype>
-                </bitrate>
-            </version>
-        </driver>
+
     </osx>
 </root>
