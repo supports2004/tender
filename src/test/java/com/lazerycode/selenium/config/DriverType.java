@@ -10,6 +10,8 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +28,9 @@ public enum DriverType implements DriverSetup {
             //TODO Uncomment the capability settings below to use Marionette
 //            capabilities.setCapability("marionette", true);
 //            capabilities.setCapability("binary", System.getProperty("webdriver.gecko.driver"));
+            FirefoxBinary firefoxBinary = new FirefoxBinary();
+            firefoxBinary.setEnvironmentProperty("DISPLAY", ":10");
+            capabilities.setCapability(FirefoxDriver.BINARY, firefoxBinary);
             return addProxySettings(capabilities, proxySettings);
         }
 
